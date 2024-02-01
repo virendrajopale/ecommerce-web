@@ -4,8 +4,12 @@ const app= express()
 const cookieParser=require('cookie-parser')
 const fileUpload=require('express-fileupload')
 const dotenv=require('dotenv')
+const path=require('path')
+if(process.env.NODE_ENV!=="PRODUCTION"){
 
-dotenv.config({path:"backend/config/config.env"})
+    require('dotenv').config({path:"backend/config/config.env"})
+}
+
 //route imports
 const products=require("./routes/productRoute")
 
@@ -28,6 +32,10 @@ app.use("/api/v1",orders)
 
 app.use("/api/v1",payment)
 
+app.use(express.static(path.join(__dirname,"../frontend/build")))
+app.get("*",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"../frontend/build/index.html"))
+})
 //middleware for error
 app.use(errormidle)
 module.exports=app;
