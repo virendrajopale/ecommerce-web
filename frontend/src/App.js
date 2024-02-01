@@ -88,10 +88,10 @@ function App() {
        {/* <Header /> */}
        <Navbar/>
        <>
+        {isAuthenticated && <UserOptions user={user}/>}
        <Elements stripe={loadStripe(stripeApiKey)}>
 
        
-        {isAuthenticated && <UserOptions user={user}/>}
          <Routes>
 
          <Route exact path='/' element={<Home/>}/>

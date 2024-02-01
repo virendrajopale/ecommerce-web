@@ -4,27 +4,40 @@ const ErrorHandler = require("../utils/errorhandler");
 const User=require('../Models/userModels')
 const catchAsyncError = require("../middleware/catchAsyncError");
 const sendToken = require("../utils/jwttoken");
-
+const bcrypt=require('bcrypt')
 const sendEmail=require('../utils/sendEmail')
 const crypto=require('crypto')
 const cloudinary=require('cloudinary')
 // /Register user
 exports.registerUser = catchAsyncError(async (req, res, next) => {
-    const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-      folder: "avatars",
-      width: 150,
-      crop: "scale",
-    });
+    try {
+      const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+        folder: "avatars",
+        width: 150,
+        crop: "scale",
+      });
   
-    const { name, email, password } = req.body;
+      const { name, email, password } = req.body;
   
-    const user = await User.create({name,email,password,
-        avatar: {
-            public_id: myCloud.public_id,
-            url: myCloud.secure_url,
-          }});
+      // Hash the password before saving it
+      const hashedPassword = await bcrypt.hash(password, 10);
     
-    sendToken(user, 201, res);
+      const user = await User.create({
+        name,
+        email,
+        password: hashedPassword,
+        avatar: {
+          public_id: myCloud.public_id,
+          url: myCloud.secure_url,
+        }
+      });
+  
+      sendToken(user, 201, res);
+    } catch (error) {
+      // Handle errors
+      console.error('Error registering user:', error);
+      next(error); // Pass the error to the next middleware
+    }
   });
 exports.loginUser=catchAsyncError(async (req,res,next)=>{
     const {email,password}=req.body;

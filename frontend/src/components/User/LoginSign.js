@@ -8,7 +8,7 @@ import { CgLockUnlock } from 'react-icons/cg'
 import { useAlert } from 'react-alert';
 import { useDispatch, useSelector } from 'react-redux'
 import { login, clearError, register } from '../../actions/userAction'
-
+import Hero from './Profile.png'
 const LoginSign = () => {
 
     const dispatch = useDispatch();
@@ -25,8 +25,8 @@ const LoginSign = () => {
     //usestate
     const [loginEmail, setLoginEmail] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
-    const [avatarPreview, setAvatarPreview] = useState('/Profile.png')
-    const [avatar, setAvatar] = useState('/Profile.png')
+    const [avatarPreview, setAvatarPreview] = useState('https://i.stack.imgur.com/l60Hf.png')
+    const [avatar, setAvatar] = useState('https://i.stack.imgur.com/l60Hf.png')
 
     const [user, setUser] = useState({
         name: "",
@@ -53,6 +53,7 @@ const LoginSign = () => {
         dispatch(register(myForm))
     }
     const registerDataChange = (e) => {
+        e.preventDefault()
         if (e.target.name === 'avatar') {
             const reader = new FileReader();
             reader.onload = () => {
@@ -79,6 +80,7 @@ const LoginSign = () => {
         }
     }, [dispatch, error, alert, navigate, isAuthenticated,redirect])
     const switchTabs = (e, tab) => {
+        e.preventDefault()
         if (tab === "login") {
             switcherTab.current.classList.add("shiftNeutral")
             switcherTab.current.classList.remove("shifttoRight")
