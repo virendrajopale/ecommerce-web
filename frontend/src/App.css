@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+body{
+  font-family: sans-serif;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+.redColor{
+  color: red !important;
+}
+.greenColor{
+  color: green !important;
+}

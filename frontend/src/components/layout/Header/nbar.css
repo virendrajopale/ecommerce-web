@@ -1,0 +1,21 @@
+.bar{
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+}
+.nbar{
+    /* display: flex; */
+    justify-content: center;
+    align-items: end;
+list-style: none;
+}
+.menus{
+ 
+    padding-right:2rem;
+
+}
+@media screen and (max-width:760px) {
+    .nbar{
+        /* flex-direction: column; */
+    }
+}

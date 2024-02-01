@@ -1,0 +1,129 @@
+.accountContainer{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position:fixed;
+    top: 0%;
+    left: 0%;
+    max-width: 100%;
+    background-color: white;
+}
+.accountContainer>div{
+    display: flex;
+    height: 100vh;
+    max-width: 100%;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.accountContainer>div:first-child>h1{
+    color: rgba(0, 0, 0, 0.478);
+    font-size: 2.2vmax;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+    transform: translateX(-10vmax) translateY(-2vmax);
+}
+.accountContainer>div:first-child>img{
+    width: 20vmax;
+    height: 20vmax;
+    border-radius: 100%;
+    transition: all 0.5s;
+    /* border-radius: 2px solid rgb(201, 49, 49); */
+}
+.accountContainer>div:first-child>img:hover{
+    transform: scale(1.05);
+}
+.accountContainer>div:first-child>a{
+    color: aliceblue;
+    text-decoration: none;
+    border: none;
+    background-color: tomato;
+    font-size: 1.4vmax;
+    font-weight: 400;
+    padding: 0.5vmax;
+    margin: 4vmax;
+    width: 30%;
+    text-align: center;
+    transition: all 0.5s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.accountContainer>div:first-child>a:hover{
+    background-color: rgba(255, 99, 71, 0.857);
+}
+.accountContainer>div:last-child{
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 5vmax;
+    align-items: flex-start;
+}
+.accountContainer>div:last-child>div>h4{
+    color: black;
+    font: 400 1.4vmax Courier;
+}
+.accountContainer>div:last-child>div>p{
+    color: rgba(0, 0, 0, 0.584);
+    margin: 0.2vmax;
+}
+.accountContainer>div:last-child>div:last-child{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.accountContainer>div:last-child>div:last-child>a{
+    border: none;
+    background-color: grey;
+    color: aliceblue;
+    text-decoration: none;
+    border: none;
+    font-size: 1.4vmax;
+    font-weight: 400;
+    padding: 0.5vmax;
+    margin: 1vmax 0;
+    text-align: center;
+    transition: all 0.5s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.accountContainer>div:last-child>div:last-child>a:hover{
+    background-color: rgb(31,31,31);
+}
+@media screen and (max-width:600px){
+    .accountContainer{
+        flex-direction: column;
+    }
+    .accountContainer>div:first-child>h1{
+        font-size: 3.2vmax;
+        font-weight: 500;
+        font-family: 'Courier New', Courier, monospace;
+        transform: translateY(-2vmax);
+    }
+    .accountContainer>div:first-child>a{
+        font-size: 1.7vmax;
+        font-weight: 400;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 1vmax;
+    }
+    .accountContainer>div:last-child{
+        text-align: center;
+        align-items: center;
+    }
+    .accountContainer>div:last-child>div>h4{
+        font-size: 2.5vmax;
+        font-weight: 500;
+        font-family: 'Courier New', Courier, monospace;
+        
+    }
+    .accountContainer>div:last-child>div>p{
+        font-size: 2vmax;
+        font-weight: 400;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0.5vmax 0;
+    }
+    .accountContainer>div:last-child>div:last-child>a{
+        font-size: 2vmax;
+        font-weight: 400;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 2vmax 0;
+        padding: 1vmax;
+    }
+}

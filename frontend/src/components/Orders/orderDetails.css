@@ -1,0 +1,102 @@
+.orderDetailsPage{
+    background-color: white;
+    
+}
+.orderDetContainer>h1{
+    font-size: 2vmax;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+}
+.orderDetContainer{
+padding: 5vmax;
+padding-bottom: 0%;
+}
+.orderDetContainer>p{
+    font-size: 1.8vmax;
+    font-weight: 400;
+}
+.orderContainerBox,
+.orderDetailsCartItemContainer{
+    margin: 2vmax;
+}
+.orderContainerBox>div{
+    display: flex;
+    margin: 1vmax 0;
+}
+.orderContainerBox>div>p{
+    font-size: 1.4vmax;
+    font-weight: 500;
+    color: black;
+}
+.orderContainerBox>div>span{
+    margin: 0 1vmax;
+    font-size: 1.4vmax;
+    font-weight: 100;
+    color: grey;
+}
+.orderDetailsCartItems>p{
+    font-size: 1.8vmax;
+    font-weight: 400;
+}
+.orderDetailsCartItems{
+    padding: 2vmax 0vmax;
+    border-top: 1px solid rgba(0, 0, 0, 0.317);
+}
+.orderDetailsCartItemContainer>div{
+display: flex;
+font-size: 1.4vmax; 
+font-weight: 400;
+align-items: center;
+margin: 2vmax 0;
+}
+.orderDetailsCartItemContainer>div>img{
+    width: 3vmax;
+}
+.orderDetailsCartItemContainer>div>a{
+    color: grey;
+    margin: 0 2vmax;
+    width: 60%;
+    text-decoration: none;
+}
+.orderDetailsCartItemContainer>div>span{
+    font-size: 1.4vmax;
+    font-weight: 400;
+    color: #5e5e5e;
+}
+@media screen and (max-width:600px) {
+    .orderDetContainer>p{
+        font-size: 6vw;
+        font-weight: 400;
+    }
+    .orderContainerBox>div{
+        margin: 6vw 0;
+    }
+    .orderContainerBox>div>p{
+        font-size: 4vw;
+    font-weight: 400;
+    }
+    .orderContainerBox>div>span{
+        font-size: 4vw;
+        font-weight: 100;
+    }
+    .orderDetailsCartItems>p{
+        font-size: 6vw;
+        font-weight: 400;
+    }
+    .orderDetailsCartItemContainer>div{
+        font-size: 4vw;
+        font-weight: 400;
+        margin: 4vw 0;
+    }
+    .orderDetailsCartItemContainer>div>img{
+        width: 10vw;
+    }
+    .orderDetailsCartItemContainer>div>a{
+        margin: 2vw ;
+        width: 30%;
+    }
+    .orderDetailsCartItemContainer>div>span{
+        font-size: 4vw;
+        font-weight: 100;
+    }
+}

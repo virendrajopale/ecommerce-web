@@ -1,0 +1,184 @@
+.UpdateProfileContainer {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(77, 67, 67);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    
+    background: url(https://img.freepik.com/free-vector/blue-3d-particles-background-design_1017-15410.jpg?w=1480&t=st=1691179225~exp=1691179825~hmac=88c9c1b65c127e526f21a2efaa536c72cb0987070662603ddfeafc9f613cb2fe) no-repeat;
+  }
+  .UpdateProfileBox {
+      border: 1px solid rgba(0, 0, 0, 0.639);
+      width: 30vw;
+      height: 60vh;
+      box-sizing: border-box;
+      overflow: hidden;
+      border-radius: 4px;
+      backdrop-filter: blur(5px);
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
+  
+  }
+  .UpdateProfileText{
+    text-align: center;
+    color: white;
+    font-family: Roboto;
+    padding: 1.3vmax;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.27);
+    padding: 1.4vmax;
+    width: 50%;
+    margin: auto;
+  }
+ 
+ 
+  .UpdateProfileForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 70%;
+    transition: all 0.5s;
+  }
+ 
+
+  .UpdateProfileForm > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+
+  .UpdateProfileForm > div > input {
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.261);
+    border-radius: 5px;
+    font-size: 1.2vmax;
+    font-weight: 500;
+    font-family: "Courier New", Courier, monospace;
+    outline: none;
+    transition: all 0.5s;
+  }
+
+  .UpdateProfileForm > div > input:hover {
+    border: 1px solid green;
+    box-shadow: 2px 3px 0 3px rgba(255, 255, 255, 0.244);
+    
+  }
+
+  .UpdateProfileForm > div > svg {
+    position: absolute;
+    transform: translateX(1vmax);
+    font-size: 1.6vmax;
+    color: rgba(0, 0, 0, 0.503);
+  }
+
+  .UpdateProfileForm > a {
+    text-decoration: none;
+    color: red;
+    /* align-self: flex-end; */
+    transition: all 0.5s;
+  }
+  .loginform > a:hover {
+    color: black;
+  }
+  #profileUpdateImage > img {
+    width: 3vmax;
+    height: 3vmax;
+    border-radius: 100%;
+    margin: 1vmax;
+  }
+  #profileUpdateImage > input {
+    display: flex;
+    padding: 0%;
+  }
+  #profileUpdateImage > input::file-selector-button {
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 5vh;
+    border: none;
+    margin: 0%;
+    font-weight: 400;
+    font-size: 1.8vmax;
+    font-family: "Courier New", Courier, monospace;
+    transition: all 0.5s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.623);
+    background-color: rgb(255, 255, 255);
+  }
+ 
+  .UpdateProfileBtn {
+    border: none;
+    font-size: 1.7vmax;
+    height: 3vmax;
+    width: 100%;
+    background-color: #0a8597;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.403);
+  }
+
+  .UpdateProfileBtn:hover {
+    background-color: green;
+  }
+  
+  
+  @media screen and (max-width:600px) {
+    .UpdateProfileContainer{
+      background: url(https://img.freepik.com/free-vector/blue-3d-particles-background-design_1017-15410.jpg?w=1480&t=st=1691179225~exp=1691179825~hmac=88c9c1b65c127e526f21a2efaa536c72cb0987070662603ddfeafc9f613cb2fe) no-repeat;
+  
+    }
+    .UpdateProfileBox{
+      width: 95vw;
+      height: 95vh;
+    }
+   
+    
+    .UpdateProfileForm{
+      padding: 5vmax;
+    
+    }
+
+    .UpdateProfileForm>div>input{
+      padding: 2vmax 5vmax;
+      font-size: 1.7vmax;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 400;
+    }
+
+    .UpdateProfileForm>div>svg{
+      font-size: 2.8vmax;
+    }
+    
+   
+    #profileUpdateImage>img{
+  width: 8vmax;
+  border-radius: 100%;
+    }
+    #profileUpdateImage > input::file-selector-button {
+      height: 7vh;
+      font-size: 1.8vmax;
+      font-weight: 400;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  
+    .UpdateProfileBtn{
+      font-size: 1.9vmax;
+      font-weight: 400;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2vmax;
+      height: 6vmax;
+    }
+  }

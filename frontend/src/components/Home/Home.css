@@ -1,0 +1,115 @@
+/* .banner{
+    background-image: linear-gradient(to right,#635ce0,#3027ae);
+    height: 100vmin;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+.banner>h1{
+    margin: 5vmax;
+    font: 600 2.5vmax 'Roboto';
+}
+.banner>p{
+    font: 300 1.4vmax "Lucida Sans";
+}
+.banner>a>button{
+margin-bottom: 5vmax;
+cursor: pointer;
+background-color: aliceblue;
+border: 1px solid white;
+border-radius: 3px;
+transition: all 0.5vmax;
+width: 9vmax;
+font:500 1vmax "Roboto" ;
+padding: 1vmax;
+}
+.banner>a>button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+.banner::after{
+    content: "";
+    width: 100vw;
+    height: 100vmin;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    max-width: 100%;
+    clip-path: polygon(100% 68% , 0 100%,100% 100%);
+}
+
+.homeHeading{
+ text-align: center;
+ font-family: 'Roboto';
+ font-size: 1.4vmax;
+ border-bottom: 1px solid rgb(17, 15, 15);
+ width: 20vmax;
+ margin: 5vmax auto;
+ color: rgba(22, 20, 20, 0.618);
+}
+.container{
+    display: flex;
+    margin: 2vmax auto;
+    width: 80vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productCart{
+
+    width: 14vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    margin: 2vmax;
+    border-radius: 2px;
+    transition: all 0.5s;
+    padding-bottom: 0.5vmax;
+}
+.productCart>img{
+    width: 14vmax;
+}
+.productCart>div{
+    margin: 0.5vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.productCardSpan{
+    margin: 0.5vmax;
+    font:300 1vmax "Roboto";
+}
+.productCart>p{
+    font-family: "Roboto";
+    font-size: 1.2vmax ;
+    margin: 1vmax 0.5vmax;
+}
+.productCart>span{
+    margin: 0.5vmax ;
+    color: tomato;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1vmax;
+}
+.productCart:hover{
+    box-shadow: 0 0 5px black;
+    transform: translate(-1vmax);
+}
+
+@media screen and (max-width:600px){
+    .productCart>p{
+        font-size: 1.7vmax;
+    }
+    .productCart>div{
+        margin: 0vamx;
+        display: block;
+    }
+    .productCart>span{
+        margin: 0 0.5vmax;
+        font: 300 1vmax "Roboto";
+    }
+} */

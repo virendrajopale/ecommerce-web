@@ -1,0 +1,225 @@
+*{
+  color: black;
+}
+.loginSignContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(77, 67, 67);
+  position: fixed;
+  top: 0%;
+  left: 0;
+  
+  background: url(https://img.freepik.com/free-vector/blue-3d-particles-background-design_1017-15410.jpg?w=1480&t=st=1691179225~exp=1691179825~hmac=88c9c1b65c127e526f21a2efaa536c72cb0987070662603ddfeafc9f613cb2fe) no-repeat;
+}
+.loginSignBox {
+    border: 1px solid rgba(0, 0, 0, 0.639);
+    width: 30vw;
+    height: 60vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
+
+}
+.login-sign-toggle {
+  display: flex;
+  height: 3vmax;
+
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.login-sign-toggle > p {
+  font-size: 1.5vmax;
+  font-weight: 600;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.login-sign-toggle > p:hover {
+  color: tomato;
+}
+.loginSignBox > div > button {
+  background-color: tomato;
+  height: 3px;
+  width: 50%;
+  border: none;
+  transition: all 0.5s;
+}
+.loginform,
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+.signUpForm {
+  transform: translateY(-100%) translateX(100vmax);
+}
+.loginform > div,
+.signUpForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.loginform > div > input,
+.signUpForm > div > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.261);
+  border-radius: 5px;
+  font-size: 1.2vmax;
+  font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
+  outline: none;
+  transition: all 0.5s;
+}
+.loginform > div > input:hover,
+.signUpForm > div > input:hover {
+  border: 1px solid green;
+  box-shadow: 2px 3px 0 3px rgba(255, 255, 255, 0.244);
+  
+}
+.loginform > div > svg,
+.signUpForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.503);
+}
+.loginform > a,
+.signUpForm > a {
+  text-decoration: none;
+  color: red;
+  /* align-self: flex-end; */
+  transition: all 0.5s;
+}
+.loginform > a:hover {
+  color: black;
+}
+#registerImage > img {
+  width: 3vmax;
+  border-radius: 100%;
+}
+#registerImage > input {
+  display: flex;
+  padding: 0%;
+}
+#registerImage > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  font-weight: 400;
+  font-size: 1.8vmax;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(255, 255, 255);
+}
+.loginbutton,
+.signUpBtn {
+  border: none;
+  font-size: 1.7vmax;
+  height: 3vmax;
+  width: 100%;
+  background-color: #0a8597;
+  font-weight: 600;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.403);
+}
+.loginbutton:hover,
+.signUpBtn:hover {
+  background-color: green;
+}
+
+.ShiftToLeft {
+  transform: translateX(-100%);
+}
+.shiftNeutral {
+  transform: translateX(0%);
+}
+.ShiftToNeutralForm {
+  transform: translateX(0%) translateY(-100%);
+}
+.shifttoRight {
+  transform: translateX(100%);
+}
+@media screen and (max-width:600px) {
+  .loginSignContainer{
+    background: url(https://img.freepik.com/free-vector/blue-3d-particles-background-design_1017-15410.jpg?w=1480&t=st=1691179225~exp=1691179825~hmac=88c9c1b65c127e526f21a2efaa536c72cb0987070662603ddfeafc9f613cb2fe) no-repeat;
+
+  }
+  .loginSignBox{
+    width: 95vw;
+    height: 95vh;
+  }
+  .login-sign-toggle{
+    height: 5vmax;
+  }
+  .login-sign-toggle>p{
+    font-size: 1.5vmax;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .loginform,.signUpForm{
+    padding: 5vmax;
+  
+  }
+  .loginform>div>input,
+  .signUpForm>div>input{
+    padding: 2vmax 5vmax;
+    font-size: 1.7vmax;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+  }
+  .loginform>div>svg,
+  .signUpForm>div>svg{
+    font-size: 2.8vmax;
+  }
+  .loginform>a{
+    font-size: 1.8vmax;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+  }
+ 
+  #registerImage>img{
+width: 8vmax;
+border-radius: 100%;
+  }
+  #registerImage > input::file-selector-button {
+    height: 7vh;
+    font-size: 1.8vmax;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .loginbutton,.signUpBtn{
+    font-size: 1.9vmax;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2vmax;
+    height: 6vmax;
+  }
+}

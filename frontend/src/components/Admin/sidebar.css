@@ -1,0 +1,128 @@
+.sidebar{
+    padding: 4rem 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar>a:first-child{
+    padding: 0;
+}
+.sidebar>a>img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.sidebar>a>img:hover{
+    filter: drop-shadow(0  10px tomato);
+}
+.sidebar a{
+    text-decoration: none;
+    transition: all 0.5s;
+    color: rgba(0, 0, 0, 0.543);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 2rem;
+    
+}
+.sidebar a:hover{
+  color: tomato;
+  transform: scale(1.1);
+}
+.sidebar a>p{
+    display: flex;
+    align-items: center;
+}
+.sidebar a>p>svg{
+  margin-right: 0.5rem;
+}
+.MyTypography-root{
+    background-color: white !important;
+}
+.dashboard{
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    position: absolute;
+}
+.dashboardContainer{
+    border-left: 1px solid rgba(0, 0, 0, 0.163);
+    background-color: white;
+    padding: 3rem 0;
+}
+.dashboardContainer >h1{
+    color: rgba(0, 0, 0, 0.698);
+    font-size: 2rem;
+    font-weight: 300;
+    margin: auto;
+    width: 50%;
+    padding: 1.5rem;
+    text-align: center;
+}
+.dashboardSummary{
+    margin: 2rem 0;
+}
+.dashboardSummary>div{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+}
+.dashboardSummary>div>p{
+    color: white;
+    padding: 1.5rem;
+    width: 100%;
+    margin: 0 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: rgb(109, 109, 201);
+}
+.dashboardSummBox2>a{
+color: black;
+font-size: 1.5rem ;
+font-weight: 300;
+text-decoration: none;
+padding: 1.5rem;
+display: flex;
+justify-content: center;
+text-align: center;
+flex-direction: column;
+margin: 2rem;
+height: 10vmax;
+width: 10vmax;
+border-radius: 50%;
+background-color: aliceblue;
+text-align: center;
+}
+.dashboardSummBox2>a:first-child{
+    background-color: palevioletred;
+    color: white;
+}
+.dashboardSummBox2>a:last-child{
+    background-color: grey;
+    color: white;
+}
+.linechart{
+    width: 80%;
+    margin: auto;
+}
+.doughChart{
+    width: 30vmax;
+    margin: auto;
+}
+@media screen and (max-width:600px){
+    .dashboard{
+        grid-template-columns: 1fr;
+    }
+    .dashboardContainer{
+        border-left: none;
+    }
+    .dashboardSummary>div>p{
+        margin: 0;
+
+    }
+    .dashboardSummBox2>a{
+        padding: 0.5rem;
+        margin: 1rem;
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+}

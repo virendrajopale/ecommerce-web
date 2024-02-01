@@ -1,0 +1,126 @@
+.shippingContainer{
+    
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vmax;
+}
+.shippingBox{
+height: 90vh;
+width: 25vw;
+box-sizing: border-box;
+overflow: hidden;
+background-color: white;
+}
+.shippingHeading{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.753);
+    font-size: 1.3vmax;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1.5vmax;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    width: 50%;
+    margin: auto;
+}
+.shippingForm{
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+    height: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+
+}
+.shippingForm>div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+}
+.shippingForm>div>input,
+.shippingForm>div>select
+{
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.261);
+    border-radius: 5px;
+    font-size: 1.2vmax;
+    font-weight: 500;
+    font-family: "Courier New", Courier, monospace;
+    outline: none;
+    transition: all 0.5s;
+}
+.shippingForm>div>svg{
+    position: absolute;
+    font-size: 1.6vmax;
+    color: rgba(0, 0, 0, 0.664);
+    transform: translateX(1vmax);
+}
+.shippingBtn{
+    border: none;
+  font-size: 1.7vmax;
+  height: 3vmax;
+  width: 100%;
+  background-color: #434a4b;
+  font-weight: 400;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.403);
+}
+.shippingBtn:hover{
+    background-color: #13923d;
+}
+.MuiStepConnector-line{
+    display: none !important;
+
+}
+.MuiStepConnector-root{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.343);
+}
+.MuiStepConnector-active,
+.MuiStepConnector-completed{
+    background-color: tomato;
+}
+@media screen and (max-width:600px){
+    .shippingBox{
+        width: 100vw;
+        height: 95vh;
+    }
+    .shippingHeading{
+        font-size: 6vw;
+        font-weight: 400;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 5vw;
+    }
+    .shippingForm{
+        padding: 11vw;
+    }
+    .shippingForm>div>input,
+    .shippingForm>div>select{
+      padding: 5vw 10vw;
+      font-size: 4vw;
+      font-weight: 400;
+    }
+    .shippingForm>div>svg{
+        font-size: 6vw;
+        transform: translateX(3vw);
+    }
+    .shippingBtn{
+        /* font-size: 4vw;
+        
+        font-weight: 400;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 4vw; */
+        height: 4vh;
+    }
+}
