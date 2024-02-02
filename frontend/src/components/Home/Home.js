@@ -30,7 +30,7 @@ const Home = () => {
     <>
      {
      loading?<Loader/ >:<>
-     <MetaData title="Vir Sales" />
+     <MetaData title="Vee Shop" />
    <Car/>
 
 <div className=" flex flex-col text-white font-sign text-xl justify-center items-center gap-4 w-full my-10">
@@ -38,7 +38,7 @@ const Home = () => {
 
         <a href="#container">
           {/* <button className='bg-red-500 rounded-lg w-32 h-12 flex justify-center items-center'> */}
-          <MdArrowDownward size={30} className= ' animate-bounce bg-red-400 h-14 w-14 rounded-full'/>
+          <MdArrowDownward size={30} className= ' animate-bounce bg-red-400 h-14 w-14 rounded-full text-white'/>
           {/* </button> */}
         </a>
       </div>

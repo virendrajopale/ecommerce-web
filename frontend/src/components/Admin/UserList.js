@@ -105,7 +105,7 @@ const UserList = () => {
     
   return (
    <>
-   <MetaData title={"All Users -Admin"}></MetaData>
+   <MetaData title={"All Users -Admin Vee shop"}></MetaData>
    <div className="dashboard">
     <Sidebar/>
     <div className="productListContainer">

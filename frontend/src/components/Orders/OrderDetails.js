@@ -27,7 +27,7 @@ const OrderDetails = () => {
     {
         loading?<Loader/>:
         <>
-          <MetaData title={"Order Details"}/>
+          <MetaData title={"Order Details -Vee shop"}/>
           <div className="orderDetailsPage">
             <div className="orderDetContainer">
                 <Typography component={"h1"}>

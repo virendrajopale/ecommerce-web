@@ -56,7 +56,7 @@ const Navbar = () => {
         </ul>
         <div onClick={()=>setNav(!nav)}
   
-        className="pr-4 z-10 cursor-pointer md:hidden">
+        className="pr-4 z-10 cursor-pointer md:hidden text-black">
           {nav?<FaTimes size={30}/>:
           <FaBars size={30}/>
           }
@@ -64,11 +64,11 @@ const Navbar = () => {
         {
           nav && 
           <ul className='flex flex-col justify-center items-center
-          absolute top-0 left-0 w-full h-screen bg-red-600'>
+          absolute top-0 left-0 w-full h-screen bg-white font-sign'>
             {
               menubar.map((links)=>(
-                <li  className='capitalize cursor-pointer px-4 py-6 text-4xl font-sign' >
-               <Link to={links.url}> {links.link}</Link>
+                <li  className='capitalize cursor-pointer px-4 py-6 text-4xl font-sign text-black' >
+               <Link to={links.url} onClick={()=>setNav(!nav)}> {links.link}</Link>
                </li>
               ))
             }

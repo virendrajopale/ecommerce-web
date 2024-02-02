@@ -64,7 +64,7 @@ const UpdateUser = () => {
 
     return (
         <>
-            <MetaData title={"Create Products"}></MetaData>
+            <MetaData title={"Create Products Vee shop"}></MetaData>
             <div className="dashboard">
                 <Sidebar />
                 <div className="newProductContainer">

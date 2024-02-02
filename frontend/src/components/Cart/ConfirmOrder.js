@@ -31,7 +31,7 @@ const ConfirmOrder = () => {
     }
   return (
    <>
-   <MetaData title={"Confirm Order"}></MetaData>
+   <MetaData title={"Confirm Order -Vee shop"}></MetaData>
    <CheckOutStep activeStep={1}></CheckOutStep>
    <div className="confirmOrderPage">
     <div className='confirmShipArea'>

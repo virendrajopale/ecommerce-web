@@ -36,7 +36,7 @@ dispatch(updateOrder(id,myForm))
   }, [error, dispatch, alert, id]);
   return (
     <>
-      <MetaData title={"Process Order"}></MetaData>
+      <MetaData title={"Process Order -Vee shop"}></MetaData>
       <div className="dashboard">
         <Sidebar></Sidebar>
        {

@@ -108,7 +108,7 @@ const OrderList = () => {
     
   return (
    <>
-   <MetaData title={"All Orders-Admin"}></MetaData>
+   <MetaData title={"All Orders-Admin - Vee shop "}></MetaData>
    <div className="dashboard">
     <Sidebar/>
     <div className="productListContainer">

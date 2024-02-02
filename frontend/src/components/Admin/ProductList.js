@@ -99,7 +99,7 @@ const ProductList = () => {
     
   return (
    <>
-   <MetaData title={"All products--Admin"}></MetaData>
+   <MetaData title={"All products--Admin -Vee shop"}></MetaData>
    <div className="dashboard">
     <Sidebar/>
     <div className="productListContainer">

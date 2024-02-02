@@ -88,7 +88,7 @@ const MyOrders = () => {
   
   return (
     <>
-    <MetaData title={`order`}/>
+    <MetaData title={`Order -Vee shop`}/>
     {
       loading ?<Loader/>:(
         <div className="myOrderPage">

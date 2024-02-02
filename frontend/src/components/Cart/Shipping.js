@@ -35,7 +35,7 @@ const Shipping = () => {
     }
   return (
     <>
-    <MetaData title={"Shipping Details"}></MetaData>
+    <MetaData title={"Shipping Details -Vee shop"}></MetaData>
         <CheckOutStep activeStep={0}/>
         <div className="shippingContainer">
             <div className="shippingBox">

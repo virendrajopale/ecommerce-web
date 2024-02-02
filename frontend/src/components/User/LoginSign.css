@@ -1,6 +1,4 @@
-*{
-  color: black;
-}
+
 .loginSignContainer {
   width: 100vw;
   height: 100vh;
@@ -13,7 +11,7 @@
   top: 0%;
   left: 0;
   
-  background: url(https://img.freepik.com/free-vector/blue-3d-particles-background-design_1017-15410.jpg?w=1480&t=st=1691179225~exp=1691179825~hmac=88c9c1b65c127e526f21a2efaa536c72cb0987070662603ddfeafc9f613cb2fe) no-repeat;
+  background: url(https://img.freepik.com/free-vector/blue-3d-particles-background-design_1017-15410.jpg?w=1480&t=st=1691179225~exp=1691179825~hmac=https://t3.ftcdn.net/jpg/01/22/48/86/360_F_122488650_kaOfP8UdoTPZtRrlCcsIR1lDoq2OrQZS.jpg) no-repeat;
 }
 .loginSignBox {
     border: 1px solid rgba(0, 0, 0, 0.639);
@@ -168,23 +166,25 @@
 }
 @media screen and (max-width:600px) {
   .loginSignContainer{
-    background: url(https://img.freepik.com/free-vector/blue-3d-particles-background-design_1017-15410.jpg?w=1480&t=st=1691179225~exp=1691179825~hmac=88c9c1b65c127e526f21a2efaa536c72cb0987070662603ddfeafc9f613cb2fe) no-repeat;
+    background: url(https://t3.ftcdn.net/jpg/01/22/48/86/360_F_122488650_kaOfP8UdoTPZtRrlCcsIR1lDoq2OrQZS.jpg) no-repeat;
 
   }
   .loginSignBox{
     width: 95vw;
-    height: 95vh;
+    height: 65vh;
+
   }
   .login-sign-toggle{
     height: 5vmax;
   }
   .login-sign-toggle>p{
-    font-size: 1.5vmax;
+    font-size: 2.5vmax;
     font-weight: 400;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
   }
   .loginform,.signUpForm{
     padding: 5vmax;
+  
   
   }
   .loginform>div>input,

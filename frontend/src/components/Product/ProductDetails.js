@@ -3,7 +3,7 @@ import Carousel from 'react-material-ui-carousel'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { clearError, getProductDetails, newProductReview } from '../../actions/productAction'
-import ReactStars from 'react-rating-stars-component'
+
 import ReviewCard from './ReviewCard'
 import Loader from '../layout/Loader/Loader'
 import { useAlert } from 'react-alert'
@@ -68,7 +68,7 @@ const ProductDetails = () => {
 
     }, [dispatch, id, error, alert,reviewError,success])
     const options = {
-        
+        color:"red",
         size: "large",
         value: products.ratings,
         readOnly:true,
@@ -81,7 +81,7 @@ const ProductDetails = () => {
         <>{
             loading ? <Loader /> :
                 <Fragment>
-                    <MetaData title={`${products.name}--ECOMMERCE`} ></MetaData>
+                    <MetaData title={`${products.name} Vee shop`} ></MetaData>
 
                     <div className="Productdetails flex justify-center items-center">
                         {/* <div> */}
@@ -112,8 +112,8 @@ const ProductDetails = () => {
                                 <span>({products.numberOfreviews} Reviews)</span>
 
                             </div>
-                            <div className="detailsBlock-3 font-sign text-xl">
-                                <h1>{`₹${products.price} `}</h1>
+                            <div className="detailsBlock-3 font-sign text-2xl ">
+                                <h1>{`₹ ${products.price} `}</h1>
                                 <div className="detailsBlock-3-1">
                                     <div className="detailsBlock-3-1-1">
                                         <button onClick={decreaseQty}>-</button>
@@ -134,7 +134,7 @@ const ProductDetails = () => {
                             <button onClick={submitReviewToggle} className='submitReview'>Submit Review</button>
                         </div>
                     </div>
-                    <h3 className="reviewHeading">REVIEWS</h3>
+                    <h3 className="reviewHeading ">REVIEWS</h3>
                     <Dialog aria-labelledby='simple-dialog-title' 
                     open={open}
                     onClose={submitReviewToggle}>
@@ -166,7 +166,7 @@ const ProductDetails = () => {
                                 }
                             </div>
                         ) : (
-                            <p className='noReview'>No Reviews Yet</p>
+                            <p className='noReview text-white text-center mb-10 text-5xl'>No Reviews Yet</p>
                         )
                     }
                 </Fragment>

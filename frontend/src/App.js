@@ -1,6 +1,5 @@
 import './App.css';
-import Header from './components/layout/Header/Header';
-import Footer from './components/layout/Footer/Footer';
+
 import Home from './components/Home/Home'
 import { BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import WebFont from 'webfontloader'
@@ -41,6 +40,7 @@ import UserList from './components/Admin/UserList';
 import UpdateUser from './components/Admin/UpdateUser';
 import ProductReviews from './components/Admin/ProductReviews';
 import Navbar from './components/layout/Header/Navbar';
+import ReviewCard from './components/Product/ReviewCard';
 
 function App() {
   const {user,isAuthenticated}=useSelector(state=>state.user)
@@ -85,7 +85,7 @@ function App() {
   return (
    <div className=' text-white font-sign'>
     <Router>
-       {/* <Header /> */}
+
        <Navbar/>
        <>
         {isAuthenticated && <UserOptions user={user}/>}
@@ -98,6 +98,7 @@ function App() {
          <Route exact path='/products/product/:id' element={<ProductDetails/>}/>
          <Route exact path='/products' element={<Products/>}/>
          <Route path='/products/:keyword' element={<Products/>}/>
+         <Route  path='/review' element={(isAuthenticated)?<ReviewCard/>:<LoginSign/>}/>
          <Route exact path='/search' element={<Search/>}/> 
          <Route exact path='/login' element={<LoginSign/>}/>
          <Route exact path='/account' element={(isAuthenticated)?<Account/>:<LoginSign/>}/>
@@ -105,7 +106,7 @@ function App() {
          <Route exact path='/password/update' element={(isAuthenticated)?<UpdatePassword/>:<LoginSign/>}/>
          <Route exact path='/password/forgot' element={<ForgotPassword/>}/>
          <Route exact path='/password/reset/:token' element={<ResetPassword/>}/>
-         <Route exact path='/cart' element={<Cart/>}/>
+         <Route exact path='/cart' element={<Cart/> }/>
          <Route exact path='/login/shipping' element={(isAuthenticated)?<Shipping/>:<LoginSign/>}/>
          <Route exact path='/order/confirm' element={(isAuthenticated)?<ConfirmOrder/>:<LoginSign/>}/>
 
@@ -113,16 +114,18 @@ function App() {
         <Route  exact path='/success' element={(isAuthenticated)?<OrderSuccess/>:<LoginSign/>}></Route>
         <Route  exact path='/orders' element={(isAuthenticated)?<MyOrders/>:<LoginSign/>}></Route>
         <Route  exact path='/order/:id' element={(isAuthenticated)?<OrderDetails/>:<LoginSign/>}></Route>
-        <Route  exact path='/admin/dashboard' element={(isAuthenticated&&user.role==='admin')?<Dashboard/>:<LoginSign/>}></Route>)
-        <Route  exact path='/admin/products' element={(isAuthenticated&&user.role==='admin')?<ProductList/>:<LoginSign/>}></Route>)
-        <Route  exact path='/admin/product' element={(isAuthenticated&&user.role==='admin')?<NewProduct/>:<LoginSign/>}></Route>)
-        <Route  exact path='/admin/product/:id' element={(isAuthenticated&&user.role==='admin')?<UpdateProduct/>:<LoginSign/>}></Route>)
-        <Route  exact path='/admin/orders' element={(isAuthenticated&&user.role==='admin')?<OrderList/>:<LoginSign/>}></Route>)
-        <Route  exact path='/admin/order/:id' element={(isAuthenticated&&user.role==='admin')?<ProcessOrder/>:<LoginSign/>}></Route>)
-        <Route  exact path='/admin/users' element={(isAuthenticated&&user.role==='admin')?<UserList/>:<LoginSign/>}></Route>)
-        <Route  exact path='/admin/user/:id' element={(isAuthenticated&&user.role==='admin')?<UpdateUser/>:<LoginSign/>}></Route>)
-        <Route  exact path='/admin/reviews' element={(isAuthenticated&&user.role==='admin')?<ProductReviews/>:<LoginSign/>}></Route>)
-      
+        <Route  exact path='/admin/dashboard' element={(isAuthenticated&&user.role==='admin')?<Dashboard/>:<LoginSign/>}></Route>
+        <Route  exact path='/admin/products' element={(isAuthenticated&&user.role==='admin')?<ProductList/>:<LoginSign/>}></Route>
+        <Route  exact path='/admin/product' element={(isAuthenticated&&user.role==='admin')?<NewProduct/>:<LoginSign/>}></Route>
+        <Route  exact path='/admin/product/:id' element={(isAuthenticated&&user.role==='admin')?<UpdateProduct/>:<LoginSign/>}></Route>
+        <Route  exact path='/admin/orders' element={(isAuthenticated&&user.role==='admin')?<OrderList/>:<LoginSign/>}></Route>
+        <Route  exact path='/admin/order/:id' element={(isAuthenticated&&user.role==='admin')?<ProcessOrder/>:<LoginSign/>}></Route>
+        <Route  exact path='/admin/users' element={(isAuthenticated&&user.role==='admin')?<UserList/>:<LoginSign/>}></Route>
+        <Route  exact path='/admin/user/:id' element={(isAuthenticated&&user.role==='admin')?<UpdateUser/>:<LoginSign/>}></Route>
+        <Route  exact path='/admin/reviews' element={(isAuthenticated&&user.role==='admin')?<ProductReviews/>:<LoginSign/>}></Route>
+
+        
+        
       
        
 
@@ -130,7 +133,7 @@ function App() {
        </Elements>
        </>
       
-       {/* <Footer/> */}
+
     </Router>
    </div>
   );

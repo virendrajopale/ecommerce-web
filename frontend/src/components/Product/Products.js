@@ -45,7 +45,7 @@ const Products = () => {
    <>{
     loading? <Loader/>:
     <>
-    <MetaData title={"PRODUCTS--ECOMMERCE"}></MetaData>
+    <MetaData title={"PRODUCTS Vee shop"}></MetaData>
     <h2 className=" m-auto width-[15vh] text-center font-sign text-4xl text-white">Products</h2>
     <div className=" flex flex-wrap p-28 min-h-[30vh] justify-center">
     {

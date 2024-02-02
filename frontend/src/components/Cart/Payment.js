@@ -106,7 +106,7 @@ const Payment = () => {
   return (
 
     <>
-    <MetaData title={"Payment"}/>
+    <MetaData title={"Payment -Vee shop"}/>
     <CheckOutStep activeStep={2}/>
     
     <div className="paymentContainer">

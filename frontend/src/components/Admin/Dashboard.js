@@ -54,7 +54,7 @@ const Dashboard = () => {
     ],
   };
   return (
-    <div className="dashboard">
+    <div className="Dashboard -Vee shop">
       <Sidebar />
       <div className="dashboardContainer">
         <Typography component={"h1"}>Dashboard</Typography>
