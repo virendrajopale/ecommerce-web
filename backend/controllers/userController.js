@@ -8,24 +8,25 @@ const bcrypt=require('bcrypt')
 const sendEmail=require('../utils/sendEmail')
 const crypto=require('crypto')
 const cloudinary=require('cloudinary')
+
 // /Register user
 exports.registerUser = catchAsyncError(async (req, res, next) => {
     try {
       const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
         folder: "avatars",
-        width: 15000,
+
         crop: "scale",
       });
   
       const { name, email, password } = req.body;
   
       // Hash the password before saving it
-      const hashedPassword = await bcrypt.hash(password, 10);
+    //   const hashedPassword = await bcrypt.hash(password, 10);
     
       const user = await User.create({
         name,
         email,
-        password: hashedPassword,
+        password,
         avatar: {
           public_id: myCloud.public_id,
           url: myCloud.secure_url,
@@ -35,7 +36,7 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
       sendToken(user, 201, res);
     } catch (error) {
       // Handle errors
-      console.error('Error registering user:', error);
+
       next(error); // Pass the error to the next middleware
     }
   });
@@ -50,14 +51,15 @@ exports.loginUser=catchAsyncError(async (req,res,next)=>{
 
     const user=await User.findOne({email}).select("+password");
 
-    if(!user){
-        return next(new ErrorHandler("Invalid email ",401))
-    }
+    // if(!user){
+    //     return next(new ErrorHandler("Invalid email ",401))
+    // }
+
 
     const isPasswordMatched=await user.comparePassword(password);
 
     if(!isPasswordMatched){
-        return next(new ErrorHandler("Invalid email ",401))
+        return next(new ErrorHandler("Invalid Password ",401))
     }
    
   

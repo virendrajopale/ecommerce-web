@@ -6,12 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(77, 67, 67);
+  background-color: rgb(12, 46, 54);
   position: fixed;
   top: 0%;
   left: 0;
-  
-  background: url(https://img.freepik.com/free-vector/blue-3d-particles-background-design_1017-15410.jpg?w=1480&t=st=1691179225~exp=1691179825~hmac=https://t3.ftcdn.net/jpg/01/22/48/86/360_F_122488650_kaOfP8UdoTPZtRrlCcsIR1lDoq2OrQZS.jpg) no-repeat;
+  color: black;
+  /* background: url(https://img.freepik.com/free-vector/blue-3d-particles-background-design_1017-15410.jpg?w=1480&t=st=1691179225~exp=1691179825~hmac=https://t3.ftcdn.net/jpg/01/22/48/86/360_F_122488650_kaOfP8UdoTPZtRrlCcsIR1lDoq2OrQZS.jpg) no-repeat; */
 }
 .loginSignBox {
     border: 1px solid rgba(0, 0, 0, 0.639);
@@ -35,7 +35,7 @@
   font-size: 1.5vmax;
   font-weight: 600;
   color: white;
-  font-family: "Courier New", Courier, monospace;
+
   transition: all 0.5s;
   cursor: pointer;
   display: grid;
@@ -83,7 +83,7 @@
   border-radius: 5px;
   font-size: 1.2vmax;
   font-weight: 500;
-  font-family: "Courier New", Courier, monospace;
+
   outline: none;
   transition: all 0.5s;
 }
@@ -113,6 +113,7 @@
 #registerImage > img {
   width: 3vmax;
   border-radius: 100%;
+  height: 3vmax;
 }
 #registerImage > input {
   display: flex;
@@ -127,7 +128,7 @@
   margin: 0%;
   font-weight: 400;
   font-size: 1.8vmax;
-  font-family: "Courier New", Courier, monospace;
+
   transition: all 0.5s;
   padding: 0 1vmax;
   color: rgba(0, 0, 0, 0.623);
@@ -191,7 +192,7 @@
   .signUpForm>div>input{
     padding: 2vmax 5vmax;
     font-size: 1.7vmax;
-    font-family: 'Courier New', Courier, monospace;
+
     font-weight: 400;
   }
   .loginform>div>svg,
@@ -200,7 +201,7 @@
   }
   .loginform>a{
     font-size: 1.8vmax;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     font-weight: 400;
   }
  
@@ -212,13 +213,13 @@ border-radius: 100%;
     height: 7vh;
     font-size: 1.8vmax;
     font-weight: 400;
-    font-family: 'Courier New', Courier, monospace;
+
   }
 
   .loginbutton,.signUpBtn{
     font-size: 1.9vmax;
     font-weight: 400;
-    font-family: 'Courier New', Courier, monospace;
+
     padding: 2vmax;
     height: 6vmax;
   }

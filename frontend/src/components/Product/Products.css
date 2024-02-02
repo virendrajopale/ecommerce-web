@@ -7,7 +7,7 @@
     color: white;
     font-size: 1.5vmax;
     font-family: 500;
-    font-family: 'Courier New', Courier, monospace;
+
     text-align: center;
 }
 .products{
@@ -46,7 +46,7 @@
     font-weight: 700;
     font-size:  1.2vmax;
     font-family:  Courier;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 .page-item:hover{
     background-color: rgb(236, 230, 230);
@@ -74,7 +74,7 @@
 .CategoryLink{
     list-style: none;
     color: rgba(255, 255, 255, 0.655);
-    font-family: 'Courier New', Courier, monospace;
+
     font-size: 1.4vmax;
     font-weight: 400;
     transition: all 0.5s;
@@ -96,11 +96,11 @@ color: tomato;
  .page-link{
     font-size: 1.5vmax;
     font-weight: 300;
-    font-family: 'Courier New', Courier, monospace;
+
  }
  .CategoryLink{
     font-size: 1.8vmax;
     font-weight: 400;
-    font-family: 'Courier New', Courier, monospace;
+
  }
 }

@@ -81,7 +81,7 @@ function App() {
   });
 
   },[])
- document.body.style.backgroundColor="#365486"
+ document.body.style.backgroundColor="rgb(12, 46, 54)"
   return (
    <div className=' text-white font-sign'>
     <Router>

@@ -82,4 +82,3 @@ userSchema.methods.getResetPassToken=function(){
 
 module.exports=new mongoose.model("User",userSchema)
 
-//

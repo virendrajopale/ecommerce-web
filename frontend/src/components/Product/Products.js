@@ -13,12 +13,13 @@ import './Products.css'
 
 const categories=[
   "Laptop",
-"Product",
-"Bottom",
-"Tops",
-"Attire",
-"Camera",
-"SmartPhones",]
+  "Food",
+  "Cloths",
+  "Electronics",
+  "Attire",
+  "Toys",
+  "Books",
+  "SmartPhones"]
 const Products = () => {
     const {loading,products,error,resultperPage,productsCount,filteredProductsCount}=useSelector((state)=>state.products);
     const dispatch=useDispatch()
