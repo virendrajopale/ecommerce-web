@@ -48,7 +48,7 @@ const Products = () => {
     <>
     <MetaData title={"PRODUCTS Vee shop"}></MetaData>
     <h2 className=" m-auto width-[15vh] text-center font-sign text-4xl text-white">Products</h2>
-    <div className=" flex flex-wrap p-28 min-h-[30vh] justify-center">
+    <div className=" flex flex-wrap p-28 min-h-[30vh] justify-center gap-3">
     {
           products && products.map(product => (
             <ProductCard product={product} />
