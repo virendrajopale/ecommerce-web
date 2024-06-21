@@ -17,11 +17,14 @@ const products=require("./routes/productRoute")
 const user=require("./routes/userRoutes")
 
 const orders=require("./routes/orderRoute")
-
+const cors=require('cors')
 const payment=require("./routes/paymentRoute")
 const bodyParser=require('body-parser')
 const multer = require('multer')
 app.use(express.json())
+// app.use(cors({
+//     origin:['https://deploye-mern-1']
+// }))
 // app.use(express.json({ limit: "50mb" })); 
 app.use(bodyParser.json({ limit: '50mb' })); // Adjust the limit as necessary
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true })); // Adjust the limit as necessary
@@ -31,6 +34,9 @@ const upload = multer({ storage });
 app.use(cookieParser())
 app.use(fileUpload())
 
+app.get('/',(req,res)=>{
+   res.json("hello")
+})
 app.use("/api/v1",products)
 
 app.use("/api/v1",user)
