@@ -60,7 +60,7 @@ exports.createProducts = CatchAsyncError(async (req, res, next) => {
     });
   } catch (error) {
     // res.status(500).json({ success: false, message: error.message });
-    console.log(error);
+    // console.log(error);
     next(error)
   }
 });
