@@ -1,7 +1,9 @@
 const express=require('express')
 const { createProducts, ReadProducts, UpdateProducts, deleteProducts, readSingleProduct, createProductReview, getProductreview, deleteProductReview, getAllProductsAdmin } = require('../controllers/productController')
-const { isAuthenticatedUser,authorizRoles } = require('../middleware/auth')
-
+const { isAuthenticatedUser,authorizRoles } = require('../middleware/auth');
+const multer = require('multer');
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
 const router=express.Router()
 
 
@@ -10,7 +12,7 @@ const router=express.Router()
 router.route("/products").get( ReadProducts)
 //route api of create
 router.route("/admin/product/new")
-.post(isAuthenticatedUser,authorizRoles("admin"),isAuthenticatedUser,createProducts)
+.post(isAuthenticatedUser,authorizRoles("admin"),createProducts)
 
 router.route("/admin/products").get(isAuthenticatedUser,authorizRoles("admin"), getAllProductsAdmin)
 //route api of update

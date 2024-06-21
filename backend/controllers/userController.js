@@ -37,7 +37,7 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
     } catch (error) {
       // Handle errors
 
-      next(error); // Pass the error to the next middleware
+      next(error); 
     }
   });
 exports.loginUser=catchAsyncError(async (req,res,next)=>{

@@ -20,11 +20,15 @@ const orders=require("./routes/orderRoute")
 
 const payment=require("./routes/paymentRoute")
 const bodyParser=require('body-parser')
+const multer = require('multer')
 app.use(express.json())
 // app.use(express.json({ limit: "50mb" })); 
-app.use(express.urlencoded({ limit: "50mb", extended: true }));
+app.use(bodyParser.json({ limit: '50mb' })); // Adjust the limit as necessary
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true })); // Adjust the limit as necessary
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
 app.use(cookieParser())
-app.use(bodyParser.urlencoded({extended:true}))
 app.use(fileUpload())
 
 app.use("/api/v1",products)

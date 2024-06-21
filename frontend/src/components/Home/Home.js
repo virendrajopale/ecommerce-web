@@ -42,7 +42,7 @@ const Home = () => {
           {/* </button> */}
         </a>
       </div>
-      <div className="flex flex-wrap p-28 min-h-[30vh] justify-center" id="container">
+      <div className="flex flex-wrap p-28 gap-5 min-h-[30vh] justify-center" id="container">
         {
           products && products.map(product => (
             <ProductCard product={product} />

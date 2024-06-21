@@ -62,13 +62,13 @@ const Dashboard = () => {
           <div>
             <p>
               Total Summary
-              <br /> 2000
+              <br />
             </p>
           </div>
           <div className="dashboardSummBox2">
             <Link to="/admin/products">
               <p>Products</p>
-              <p>{}</p>
+              <p>{products?.length}</p>
             </Link>
             <Link to="/admin/orders">
               <p>Orders</p>

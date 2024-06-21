@@ -48,7 +48,7 @@ const UpdateProfile = () => {
             setName(user.name)
             setEmail(user.email)
             setAvatarPreview(user.avatar.url)
-            console.log("hiiii");
+            // console.log("hiiii");
         }
         if (error) {
             alert.error(error)

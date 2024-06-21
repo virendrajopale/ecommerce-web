@@ -139,6 +139,7 @@ export const newReviewReducer=(state={},action)=>{
 
    //NEW PRD BY ADMIN
    export const newProductReducer=(state={product:{}},action)=>{
+
     switch (action.type) {
        case NEW_PRODUCT_REQUEST:
          

@@ -4,32 +4,66 @@ const CatchAsyncError=require("../middleware/catchAsyncError")
 const ApiFeature=require('../utils/apifeatures')
 const cloudinary=require('cloudinary');
 //Create Product
-exports.createProducts=CatchAsyncError(async (req,res,next)=>{
-  let images=[];
-  if(typeof req.body.images==='string'){
-    images.push(req.body.images)
-  }else{
-    images=req.body.images;
+exports.createProducts = CatchAsyncError(async (req, res, next) => {
+  try {
+    // console.log(req.body);
+    // let images = [];
+
+    // if (req.files && req.files.length > 0) {
+    //   images = req.files;
+    // } else if (typeof req.body.images === 'string') {
+    //   images.push(req.body.images);
+    // } else if (Array.isArray(req.body.images)) {
+    //   images = req.body.images;
+    // }
+// console.log(req.files);
+    // const imagesLink = [];
+    // for (let i = 0; i < images.length; i++) {
+    //   let result;
+    //   if (images[i].buffer) {
+    //     result = await cloudinary.uploader.upload_stream({ folder: 'products' }, (error, result) => {
+    //       if (error) {
+    //         throw new Error('Cloudinary upload failed');
+    //       }
+    //       return result;
+    //     }).end(images[i].buffer);
+    //   } else {
+    //     result = await cloudinary.uploader.upload(images[i], {
+    //       folder: 'products'
+    //     });
+    //   }
+    //   imagesLink.push({
+    //     public_id: result.public_id,
+    //     url: result.secure_url
+    //   });
+    // }
+
+   const myCloud= await cloudinary.v2.uploader.upload(req.body.images, {
+      folder: "products",
+
+      crop: "scale",
+    });
+    // req.body.images = imagesLink;
+    req.body.user = req.user.id;
+    // console.log(req.body.image);
+    // console.log(myCloud.public_id);
+    // console.log(myCloud.secure_url);
+    const {name,description,price,stock,category}=req.body
+    const product = await Product.create({name,description,price,stock,category,user:req.user.id,images: {
+          public_id: myCloud.public_id,
+          url: myCloud.secure_url,
+        }});
+    //  console.log(product);
+    res.status(201).json({
+      success: true,
+      product
+    });
+  } catch (error) {
+    // res.status(500).json({ success: false, message: error.message });
+    console.log(error);
+    next(error)
   }
-  const imagesLink=[];
-  for (let i = 0; i < images.length; i++) {
-    const result=await cloudinary.v2.uploader.upload(images[i],{
-      folder:'products'
-    })
-    imagesLink.push({
-      public_id:result.public_id,
-      url:result.secure_url
-    })
-  }
-  req.body.images=imagesLink
-  req.body.user=req.user.id;
-  const product=await Product.create(req.body);
-  
-  res.status(201).json({
-    success:true,
-    product
-  })
-})
+});
 
 //read products
 exports.ReadProducts=CatchAsyncError(async (req,res,next)=>{
@@ -48,7 +82,7 @@ let products=await ApiFeture.query
 let filteredProductsCount =products.length;
 
 //  products=await ApiFeture.query;
-
+console.log(products);
   res.status(200).json({
     success:true,
     products,

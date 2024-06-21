@@ -20,7 +20,17 @@ const productSchema=new mongoose.Schema({
       default:"Product"
     },
    
-    images:[{
+    // images:[{
+    //     public_id:{
+    //         type:String,
+    //         required:true
+    //     },
+    //     url:{
+    //         type:String,
+    //         required:true 
+    //     }
+    // }], // did changes
+    images:{
         public_id:{
             type:String,
             required:true
@@ -29,7 +39,7 @@ const productSchema=new mongoose.Schema({
             type:String,
             required:true 
         }
-    }],
+    },
     ratings:{
         type:Number,
         default:0
